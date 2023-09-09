@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AIL4fc_nRGSRFXko3VmGo9nbXhiNUnRys0nbxmsB76IjGjt6zzlkejysjc9GtUi6HSd_J5CaGDqZokN8_oqdWJv_xi1GSKaVNxSYkPd8GxX4YlZJcWNnin-XMwCuW69otI8NZiOCFGS1EI6LcQGvzMLbKCAX=w32-h32-s-no?authuser=2"> <!-- ИКОНКА -->
+    <title>Датчики</title>
+
+    <!-- ===== css ===== -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- //=== css ===== -->
+</head>
+<body>
+    <h1>Генерация случайных чисел</h1> <!-- Выровнять посередине -->
+    <main>
+        <section class="settings">
+            <h2 class="settings__title weigth">Укажите настройки</h2> <!-- Перенести в правую часть -->
+    
+            <div class="settings__interval-text">Частота генерации, секунды</div>
+            <input type="number" class="settings__input" id="intervalInput" value="1000">
+        </section>
+
+        <div class="vr-line"></div>
+
+        <!-- Если выбран работник, то отображаются поля -->
+        <section class="values">
+            <div class="values-header">
+                <div class="values-header-header">
+                    <h2 class="values-header-header__title weigth">Выберите объект</h2>
+                    <select class="select" id="values__select">
+                        <option value="./img/worker.svg" class="select__option">Работник</option> <!-- В value путь к картинке, которая должна отображаться возле списка -->
+                        <option value="./img/transport.svg" class="select__option">Транспорт</option>
+                    </select>
+                </div>
+
+                <div class="values-header__img">
+                    <img src="./img/worker.svg" alt="worker">
+                </div>
+            </div>
+
+            <div class="values__container">
+                <!-- Плохо оформленно, принцип — строка здесь это строка там -->
+                <div class="values__container__worker">
+                    <div class="values__container__key"><span>Пульс:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="10"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="100"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="PULS"></span></span></div></div>
+                    <div class="values__container__key"><span>Температура:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="35"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="42"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="TEMP"></span></span></div></div>
+                    
+                    <hr>
+
+                    <div class="values__container__key"><span>Пульс:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="10"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="100"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="PULS"></span></span></div></div>
+                    <div class="values__container__key"><span>Температура:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="35"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="42"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="TEMP"></span></span></div></div>
+                    
+                    <hr>
+
+                    <div class="values__container__key"><span>Пульс:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="10"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="100"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="PULS"></span></span></div></div>
+                    <div class="values__container__key"><span>Температура:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="35"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="42"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="TEMP"></span></span></div></div>
+                    
+                    <hr>
+
+                    <div class="values__container__key"><span>Пульс:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="10"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="100"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="PULS"></span></span></div></div>
+                    <div class="values__container__key"><span>Температура:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)" value="35"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)" value="42"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="TEMP"></span></span></div></div>
+                </div>
+                <div class="values__container__transport hide">
+                    <div class="values__container__key"><span>Скорость:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="PULS"></span></span></div></div>
+                    <div class="values__container__key"><span>Расход топлива:</span> <div class="values__container__input-container"><span>от</span> <input type="number" size="3" maxlength="3" class="input-from" oninput="limitInputLength(this)"> <span>до</span> <input type="number" size="3" maxlength="3" class="input-to" oninput="limitInputLength(this)"> <span class="enter-text">Значение: <span class="enter-num" data-keyName="TEMP"></span></span></div></div>    
+                </div>
+            </div>
+
+            <input type="button" value="Старт" class="button"  id="start-btn">
+            <input type="button" value="Стоп" class="button" id="stop-btn" disabled>
+        </section>
+    </main>
+
+
+    <!-- ** add scripts -->
+    <script src="./scripts.js"></script>
+    <script>
+        function limitInputLength($elmm) {
+          var input = $elmm
+          if (input.value.length > 3) {
+            input.value = input.value.slice(0, 3) // Обрезаем введенное значение до 5 символов
+          }
+        }
+    </script>
+    <!-- // add scripts -->
+</body>
+</html>
